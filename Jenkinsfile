@@ -25,6 +25,18 @@ node {
         }
         echo "done"
     }
+    stage('Host Python Package Index') {
+        withKubeConfig(
+            clusterName: 'microk8s-cluster',
+            contextName: 'microk8s',
+            credentialsId: 'multiverse-india-do-config',
+            namespace: 'multiverse-delivery',
+            serverUrl: 'https://157.245.106.167:16443') {
+            sh 'kubectl apply -f ${WORKSPACE}/eapp-python-domain/playbook/deployment.yaml'
+            sh 'kubectl apply -f ${WORKSPACE}/eapp-python-domain/playbook/service.yaml'
+        }
+        echo "done"
+    }
     stage('Clean workspace') {
         cleanWs()
         echo "done"
