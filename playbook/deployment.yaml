@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-package-index
+  namespace: multiverse-delivery
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      epod: eapp-python-package-index
+  template:
+    metadata:
+      labels:
+        epod: eapp-python-package-index
+    spec:
+      containers:
+        - name: python-package-index-host-container
+          image: pypiserver/pypiserver:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: python-index-http
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "0.02"
+            limits:
+              memory: "128Mi"
+              cpu: "0.04"
+          args: ["-P", ".", "-a", "."]
