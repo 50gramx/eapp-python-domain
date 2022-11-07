@@ -37,6 +37,15 @@ node {
         }
         echo "done"
     }
+    stage('Build & Push the Package') {
+        sh '''
+        #!/bin/sh
+
+        cp ${WORKSPACE}/eapp-python-domain/pypirc ~/.pypirc
+        python3 ${WORKSPACE}/eapp-python-domain/setup.py sdist register -r local upload -r local
+        rm ~/.pypirc
+        '''
+    }
     stage('Clean workspace') {
         cleanWs()
         echo "done"
