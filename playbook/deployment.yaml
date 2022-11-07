@@ -19,7 +19,7 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
-              name: python-index-http
+              name: index-http
           resources:
             requests:
               memory: "64Mi"

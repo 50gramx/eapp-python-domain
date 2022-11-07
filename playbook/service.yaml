@@ -8,7 +8,7 @@ spec:
   selector:
     epod: eapp-python-package-index
   ports:
-    - name: python-index-http
+    - name: index-http
       protocol: TCP
       port: 80
       targetPort: 8080
