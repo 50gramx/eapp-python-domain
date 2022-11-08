@@ -37,7 +37,7 @@ node {
         }
         echo "done"
     }
-    stage('Build & Push the Package') {
+    stage('Build & Publish the Package') {
         sh '''
         #!/bin/sh
 
