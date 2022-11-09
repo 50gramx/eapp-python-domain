@@ -2,7 +2,7 @@ import pathlib
 
 from setuptools import setup, find_packages
 
-here = pathlib.Path(__file__).parent.resolve()
+    version='0.2.11',
 
 setup(
     name='eapp_python_domain',
