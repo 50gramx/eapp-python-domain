@@ -2,8 +2,9 @@ import pathlib
 
 from setuptools import setup, find_packages
 
-    version='0.2.11',
+here = pathlib.Path(__file__).parent.resolve()
 
+# NOTE: DO NOT EDIT ANYTHING TILL LINE NO 9
 setup(
     name='eapp_python_domain',
     version='0.2.10',
