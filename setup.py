@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 here = pathlib.Path(__file__).parent.resolve()
 
-# NOTE: DO NOT EDIT ANYTHING TILL LINE NO 9
+# NOTE: DO NOT EDIT ANYTHING TILL LINE NO 10
 setup(
     name='eapp_python_domain',
     version='0.2.10',
