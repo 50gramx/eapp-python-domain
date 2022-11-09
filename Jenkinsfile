@@ -17,7 +17,7 @@ node {
                     userRemoteConfigs: [
                         [
                             credentialsId: 'multiverse-delivery-github-50gramx',
-                            url: 'https://github.com/50gramx/eapp-python-domain.git'
+                            url: 'https://Amit-Khetan-70@github.com/50gramx/eapp-python-domain.git'
                         ]
                     ]
                 ]
