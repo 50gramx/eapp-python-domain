@@ -1,0 +1,214 @@
+Index: setup.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import setuptools\n\nsetuptools.setup(\n    name='eapp-python-domain',\n    version='0.2.4',\n    author='Amit Khetan',\n    author_email='amit.khetan.70@50gramx.io',\n    description='ethos applications entities and service contracts for python domain',\n    packages=['eapp-python-domain'],\n    install_requires=['protobuf', 'grpcio', 'grpcio-tools'],\n)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/setup.py b/setup.py
+--- a/setup.py	(revision cc06804293db1e01ab1bb47c20cad1df688c7ae7)
++++ b/setup.py	(date 1667880399303)
+@@ -6,6 +6,7 @@
+     author='Amit Khetan',
+     author_email='amit.khetan.70@50gramx.io',
+     description='ethos applications entities and service contracts for python domain',
+-    packages=['eapp-python-domain'],
++    packages=setuptools.find_packages('eapp-python-domain.eapp-python-domain'),
+     install_requires=['protobuf', 'grpcio', 'grpcio-tools'],
+-)
+\ No newline at end of file
++    include_package_data=True
++)
+Index: Jenkinsfile
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>node {\n    stage('Clean workspace') {\n        cleanWs()\n        echo \"done\"\n    }\n    stage('Checkout Python Domain') {\n        dir('eapp-python-domain') {\n            checkout(\n                [\n                    $class: 'GitSCM',\n                    branches: [\n                        [\n                            name: '*/master'\n                        ]\n                    ],\n                    extensions: [],\n                    userRemoteConfigs: [\n                        [\n                            credentialsId: 'multiverse-delivery-github-50gramx',\n                            url: 'https://github.com/50gramx/eapp-python-domain.git'\n                        ]\n                    ]\n                ]\n            )\n        }\n        echo \"done\"\n    }\n    stage('Host Python Package Index') {\n        withKubeConfig(\n            clusterName: 'microk8s-cluster',\n            contextName: 'microk8s',\n            credentialsId: 'multiverse-india-do-config',\n            namespace: 'multiverse-delivery',\n            serverUrl: 'https://157.245.106.167:16443') {\n            sh 'kubectl apply -f ${WORKSPACE}/eapp-python-domain/playbook/deployment.yaml'\n            sh 'kubectl apply -f ${WORKSPACE}/eapp-python-domain/playbook/service.yaml'\n        }\n        echo \"done\"\n    }\n    stage('Build & Publish the Package') {\n        sh '''\n        #!/bin/sh\n\n        cp ${WORKSPACE}/eapp-python-domain/pypirc ~/.pypirc\n        python3 ${WORKSPACE}/eapp-python-domain/setup.py sdist register -r local upload -r local\n        rm ~/.pypirc\n        '''\n    }\n    stage('Clean workspace') {\n        cleanWs()\n        echo \"done\"\n    }\n}\n//\n// step-1: deploy the pypi server\n// step-2: build the package\n// step-3: push the package
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Jenkinsfile b/Jenkinsfile
+--- a/Jenkinsfile	(revision cc06804293db1e01ab1bb47c20cad1df688c7ae7)
++++ b/Jenkinsfile	(date 1668022328248)
+@@ -43,6 +43,7 @@
+ 
+         cp ${WORKSPACE}/eapp-python-domain/pypirc ~/.pypirc
+         python3 ${WORKSPACE}/eapp-python-domain/setup.py sdist register -r local upload -r local
++        python3 setup.py sdist register -r local upload -r local
+         rm ~/.pypirc
+         '''
+     }
+Index: pyproject.toml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[build-system]\nrequires = [\"setuptools>=61.0\"]\nbuild-backend = \"setuptools.build_meta\"
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	(revision cc06804293db1e01ab1bb47c20cad1df688c7ae7)
++++ b/pyproject.toml	(date 1667877589720)
+@@ -1,3 +1,3 @@
+-[build-system]
+-requires = ["setuptools>=61.0"]
+-build-backend = "setuptools.build_meta"
+\ No newline at end of file
++#[build-system]
++#requires = ["setuptools>=61.0"]
++#build-backend = "setuptools.build_meta"
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"JavaScriptSettings\">\n    <option name=\"languageLevel\" value=\"ES6\" />\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.7\" project-jdk-type=\"Python SDK\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision cc06804293db1e01ab1bb47c20cad1df688c7ae7)
++++ b/.idea/misc.xml	(date 1667876254127)
+@@ -3,5 +3,5 @@
+   <component name="JavaScriptSettings">
+     <option name="languageLevel" value="ES6" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (id)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: eapp-python-domain/__init__.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pkgutil\n\n__path__ = pkgutil.extend_path(__path__, __name__)\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/eapp-python-domain/__init__.py b/eapp-python-domain/__init__.py
+--- a/eapp-python-domain/__init__.py	(revision cc06804293db1e01ab1bb47c20cad1df688c7ae7)
++++ b/eapp-python-domain/__init__.py	(date 1667879113190)
+@@ -1,3 +1,0 @@
+-import pkgutil
+-
+-__path__ = pkgutil.extend_path(__path__, __name__)
+Index: MANIFEST.IN
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/MANIFEST.IN b/MANIFEST.IN
+new file mode 100644
+--- /dev/null	(date 1668022153471)
++++ b/MANIFEST.IN	(date 1668022153471)
+@@ -0,0 +1,1 @@
++recursive-include eapp-python-domain/gramx *.py
+\ No newline at end of file
+Index: .idea/lapp-python-domain.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"PYTHON_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\">\n    <content url=\"file://$MODULE_DIR$\">\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\n    </content>\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/lapp-python-domain.iml b/.idea/lapp-python-domain.iml
+--- a/.idea/lapp-python-domain.iml	(revision cc06804293db1e01ab1bb47c20cad1df688c7ae7)
++++ b/.idea/lapp-python-domain.iml	(date 1667876254111)
+@@ -4,6 +4,7 @@
+     <content url="file://$MODULE_DIR$">
+       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+     </content>
++    <orderEntry type="jdk" jdkName="Python 3.9 (id)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectId\" id=\"1R2Xgk1VPH58HQs7W6EvHZROCbW\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision cc06804293db1e01ab1bb47c20cad1df688c7ae7)
++++ b/.idea/workspace.xml	(date 1668025128454)
+@@ -1,4 +1,79 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="ChangeListManager">
++    <list default="true" id="c85bad50-d735-4168-9d25-54b2d0af94e1" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/MANIFEST.IN" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/lapp-python-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lapp-python-domain.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/eapp-python-domain/__init__.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++    <option name="UPDATE_TYPE" value="REBASE" />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
+   <component name="ProjectId" id="1R2Xgk1VPH58HQs7W6EvHZROCbW" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "last_opened_file_path": "/opt/ethos/apps/service/eapp-python-domain/eapp-python-domain",
++    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
++  }
++}]]></component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/eapp-python-domain" />
++    </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$" />
++    </key>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="c85bad50-d735-4168-9d25-54b2d0af94e1" name="Changes" comment="" />
++      <created>1667873790358</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1667873790358</updated>
++      <workItem from="1667873792577" duration="311000" />
++      <workItem from="1667874110839" duration="74000" />
++      <workItem from="1667875172898" duration="8104000" />
++    </task>
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+ </project>
+\ No newline at end of file
+diff --git a/__init__.py b/__init__.py
+new file mode 100644

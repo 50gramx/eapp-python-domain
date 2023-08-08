@@ -1,0 +1,19 @@
+Index: setup.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import setuptools\n\nsetuptools.setup(\n    name='eapp-python-domain',\n    version='0.1.0',\n    author='Amit Khetan',\n    author_email='amit.khetan.70@50gramx.io',\n    description='ethos applications entities and service contracts for python domain',\n    packages=['eapp-python-domain'],\n    install_requires=['protobuf', 'grpcio', 'grpcio-tools'],\n)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/setup.py b/setup.py
+--- a/setup.py	
++++ b/setup.py	
+@@ -2,7 +2,7 @@
+ 
+ setuptools.setup(
+     name='eapp-python-domain',
+-    version='0.1.0',
++    version='0.2.4',
+     author='Amit Khetan',
+     author_email='amit.khetan.70@50gramx.io',
+     description='ethos applications entities and service contracts for python domain',

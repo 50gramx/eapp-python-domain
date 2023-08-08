@@ -1,0 +1,385 @@
+Index: setup.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import setuptools\n\nsetuptools.setup(\n    name='eapp-python-domain',\n    version='0.2.9',\n    author='Amit Khetan',\n    author_email='amit.khetan.70@50gramx.io',\n    description='ethos applications entities and service contracts for python domain',\n    packages=setuptools.find_packages('eapp-python-domain.eapp-python-domain'),\n    install_requires=['protobuf', 'grpcio', 'grpcio-tools'],\n    include_package_data=True\n)\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/setup.py b/setup.py
+--- a/setup.py	(revision 07c28f4d188c9b8616c114542b01c2ce9a03cfa6)
++++ b/setup.py	(date 1668037146508)
+@@ -1,12 +1,17 @@
+-import setuptools
++import pathlib
++
++from setuptools import setup, find_packages
+ 
+-setuptools.setup(
+-    name='eapp-python-domain',
++here = pathlib.Path(__file__).parent.resolve()
++
++setup(
++    name='ethos_contracts',
+     version='0.2.9',
+     author='Amit Khetan',
+     author_email='amit.khetan.70@50gramx.io',
+     description='ethos applications entities and service contracts for python domain',
+-    packages=setuptools.find_packages('eapp-python-domain.eapp-python-domain'),
++    package_dir={"": "src"},  # Optional
++    packages=find_packages(where="src"),
+     install_requires=['protobuf', 'grpcio', 'grpcio-tools'],
+     include_package_data=True
+ )
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"JavaScriptSettings\">\n    <option name=\"languageLevel\" value=\"ES6\" />\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.7\" project-jdk-type=\"Python SDK\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 07c28f4d188c9b8616c114542b01c2ce9a03cfa6)
++++ b/.idea/misc.xml	(date 1668037146530)
+@@ -3,5 +3,5 @@
+   <component name="JavaScriptSettings">
+     <option name="languageLevel" value="ES6" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (id)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: src/ethos_contracts/simple.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/ethos_contracts/simple.py b/src/ethos_contracts/simple.py
+new file mode 100644
+--- /dev/null	(date 1668037146602)
++++ b/src/ethos_contracts/simple.py	(date 1668037146602)
+@@ -0,0 +1,2 @@
++def add_one(number):
++    return number + 1
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectId\" id=\"1R2Xgk1VPH58HQs7W6EvHZROCbW\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 07c28f4d188c9b8616c114542b01c2ce9a03cfa6)
++++ b/.idea/workspace.xml	(date 1668037146548)
+@@ -1,4 +1,168 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="ChangeListManager">
++    <list default="true" id="c85bad50-d735-4168-9d25-54b2d0af94e1" name="Changes" comment="ELINT-72 updated build step">
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/google/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/google/api/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/zero/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/zero/ethos/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/zero/ethos/identity/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/zero/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/zero/ethos/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/__init__.py" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/ethos_contracts/simple.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/lapp-python-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lapp-python-domain.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/MANIFEST.IN" beforeDir="false" afterPath="$PROJECT_DIR$/MANIFEST.IN" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/google/api/annotations_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/google/api/annotations_pb2.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/google/api/annotations_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/google/api/annotations_pb2_grpc.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/google/api/http_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/google/api/http_pb2.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/google/api/http_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/google/api/http_pb2_grpc.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/google/api/httpbody_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/google/api/httpbody_pb2.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/google/api/httpbody_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/google/api/httpbody_pb2_grpc.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2_grpc.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2_grpc.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2_grpc.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2_grpc.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2_grpc.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Python Script" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
+   <component name="ProjectId" id="1R2Xgk1VPH58HQs7W6EvHZROCbW" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/opt/ethos/apps/service/eapp-python-domain/eapp-python-domain&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
++  }
++}</component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/eapp-python-domain" />
++    </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/src" />
++      <recent name="$PROJECT_DIR$" />
++    </key>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="c85bad50-d735-4168-9d25-54b2d0af94e1" name="Changes" comment="" />
++      <created>1667873790358</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1667873790358</updated>
++      <workItem from="1667873792577" duration="311000" />
++      <workItem from="1667874110839" duration="74000" />
++      <workItem from="1667875172898" duration="9210000" />
++      <workItem from="1668026489322" duration="2960000" />
++      <workItem from="1668032790173" duration="3447000" />
++      <workItem from="1668036550545" duration="446000" />
++    </task>
++    <task id="LOCAL-00001" summary="ELINT-72 Updated GIT Url">
++      <created>1668026785939</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1668026785939</updated>
++    </task>
++    <task id="LOCAL-00002" summary="ELINT-72 Updated init, updated find_packages">
++      <created>1668027080400</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1668027080400</updated>
++    </task>
++    <task id="LOCAL-00003" summary="ELINT-72 commented pyproject.toml">
++      <created>1668027095095</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1668027095095</updated>
++    </task>
++    <task id="LOCAL-00004" summary="ELINT-72 added Manifest for recursive include">
++      <created>1668027111079</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1668027111079</updated>
++    </task>
++    <task id="LOCAL-00005" summary="ELINT-72 updated build step">
++      <created>1668028774848</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1668028774848</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="ELINT-72 Updated GIT Url" />
++    <MESSAGE value="ELINT-72 Updated init, updated find_packages" />
++    <MESSAGE value="ELINT-72 commented pyproject.toml" />
++    <MESSAGE value="ELINT-72 added Manifest for recursive include" />
++    <MESSAGE value="ELINT-72 updated build step" />
++    <option name="LAST_COMMIT_MESSAGE" value="ELINT-72 updated build step" />
++  </component>
+ </project>
+\ No newline at end of file
+Index: MANIFEST.IN
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>recursive-include eapp-python-domain/gramx *.py
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/MANIFEST.IN b/MANIFEST.IN
+--- a/MANIFEST.IN	(revision 07c28f4d188c9b8616c114542b01c2ce9a03cfa6)
++++ b/MANIFEST.IN	(date 1668037146562)
+@@ -1,1 +1,1 @@
+-recursive-include eapp-python-domain/gramx *.py
+\ No newline at end of file
++# recursive-include eapp-python-domain/gramx *.py
+\ No newline at end of file
+Index: pyproject.toml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#[build-system]\n#requires = [\"setuptools>=61.0\"]\n#build-backend = \"setuptools.build_meta\"
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	(revision 07c28f4d188c9b8616c114542b01c2ce9a03cfa6)
++++ b/pyproject.toml	(date 1668037146576)
+@@ -1,3 +1,3 @@
+-#[build-system]
+-#requires = ["setuptools>=61.0"]
+-#build-backend = "setuptools.build_meta"
+\ No newline at end of file
++[build-system]
++requires = ["setuptools>=61.0"]
++build-backend = "setuptools.build_meta"
+\ No newline at end of file
+Index: .idea/lapp-python-domain.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"PYTHON_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\">\n    <content url=\"file://$MODULE_DIR$\">\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\n    </content>\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/lapp-python-domain.iml b/.idea/lapp-python-domain.iml
+--- a/.idea/lapp-python-domain.iml	(revision 07c28f4d188c9b8616c114542b01c2ce9a03cfa6)
++++ b/.idea/lapp-python-domain.iml	(date 1668037146587)
+@@ -4,6 +4,7 @@
+     <content url="file://$MODULE_DIR$">
+       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+     </content>
++    <orderEntry type="jdk" jdkName="Python 3.9 (id)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+diff --git a/src/ethos_contracts/gramx/fifty/zero/__init__.py b/src/ethos_contracts/gramx/fifty/zero/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/fifty/zero/ethos/__init__.py b/src/ethos_contracts/gramx/fifty/zero/ethos/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/fifty/zero/ethos/identity/__init__.py b/src/ethos_contracts/gramx/fifty/zero/ethos/identity/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/__init__.py b/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/__init__.py b/src/ethos_contracts/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/__init__.py b/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/__init__.py b/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/__init__.py
+new file mode 100644
+diff --git a/eapp-python-domain/google/api/httpbody_pb2.py b/src/ethos_contracts/google/api/httpbody_pb2.py
+rename from eapp-python-domain/google/api/httpbody_pb2.py
+rename to src/ethos_contracts/google/api/httpbody_pb2.py
+diff --git a/eapp-python-domain/google/api/annotations_pb2.py b/src/ethos_contracts/google/api/annotations_pb2.py
+rename from eapp-python-domain/google/api/annotations_pb2.py
+rename to src/ethos_contracts/google/api/annotations_pb2.py
+diff --git a/eapp-python-domain/google/api/http_pb2.py b/src/ethos_contracts/google/api/http_pb2.py
+rename from eapp-python-domain/google/api/http_pb2.py
+rename to src/ethos_contracts/google/api/http_pb2.py
+diff --git a/eapp-python-domain/google/api/httpbody_pb2_grpc.py b/src/ethos_contracts/google/api/httpbody_pb2_grpc.py
+rename from eapp-python-domain/google/api/httpbody_pb2_grpc.py
+rename to src/ethos_contracts/google/api/httpbody_pb2_grpc.py
+diff --git a/eapp-python-domain/google/api/http_pb2_grpc.py b/src/ethos_contracts/google/api/http_pb2_grpc.py
+rename from eapp-python-domain/google/api/http_pb2_grpc.py
+rename to src/ethos_contracts/google/api/http_pb2_grpc.py
+diff --git a/eapp-python-domain/google/api/annotations_pb2_grpc.py b/src/ethos_contracts/google/api/annotations_pb2_grpc.py
+rename from eapp-python-domain/google/api/annotations_pb2_grpc.py
+rename to src/ethos_contracts/google/api/annotations_pb2_grpc.py
+diff --git a/eapp-python-domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2_grpc.py b/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2_grpc.py
+rename from eapp-python-domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2_grpc.py
+rename to src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2_grpc.py
+diff --git a/eapp-python-domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2.py b/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2.py
+rename from eapp-python-domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2.py
+rename to src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2.py
+diff --git a/eapp-python-domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2_grpc.py b/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2_grpc.py
+rename from eapp-python-domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2_grpc.py
+rename to src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2_grpc.py
+diff --git a/eapp-python-domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2.py b/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2.py
+rename from eapp-python-domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2.py
+rename to src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2.py
+diff --git a/eapp-python-domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2.py b/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2.py
+rename from eapp-python-domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2.py
+rename to src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2.py
+diff --git a/eapp-python-domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2_grpc.py b/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2_grpc.py
+rename from eapp-python-domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2_grpc.py
+rename to src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2_grpc.py
+diff --git a/eapp-python-domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2_grpc.py b/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2_grpc.py
+rename from eapp-python-domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2_grpc.py
+rename to src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2_grpc.py
+diff --git a/eapp-python-domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2.py b/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2.py
+rename from eapp-python-domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2.py
+rename to src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2.py
+diff --git a/src/ethos_contracts/google/__init__.py b/src/ethos_contracts/google/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/google/api/__init__.py b/src/ethos_contracts/google/api/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/__init__.py b/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/__init__.py
+new file mode 100644
+diff --git a/eapp-python-domain/__init__.py b/src/__init__.py
+rename from eapp-python-domain/__init__.py
+rename to src/__init__.py
+diff --git a/src/ethos_contracts/gramx/seventy/__init__.py b/src/ethos_contracts/gramx/seventy/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/seventy/zero/__init__.py b/src/ethos_contracts/gramx/seventy/zero/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/seventy/zero/ethos/__init__.py b/src/ethos_contracts/gramx/seventy/zero/ethos/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/__init__.py b/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/__init__.py b/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/__init__.py b/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/__init__.py b/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/__init__.py b/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/__init__.py b/src/ethos_contracts/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/__init__.py b/src/ethos_contracts/gramx/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/__init__.py b/src/ethos_contracts/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/__init__.py
+new file mode 100644
+diff --git a/src/ethos_contracts/gramx/fifty/__init__.py b/src/ethos_contracts/gramx/fifty/__init__.py
+new file mode 100644

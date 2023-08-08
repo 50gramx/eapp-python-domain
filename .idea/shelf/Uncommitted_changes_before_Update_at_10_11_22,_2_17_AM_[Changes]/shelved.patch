@@ -1,0 +1,196 @@
+Index: setup.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import setuptools\n\nsetuptools.setup(\n    name='eapp-python-domain',\n    version='0.2.5',\n    author='Amit Khetan',\n    author_email='amit.khetan.70@50gramx.io',\n    description='ethos applications entities and service contracts for python domain',\n    packages=['eapp-python-domain'],\n    install_requires=['protobuf', 'grpcio', 'grpcio-tools'],\n)
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/setup.py b/setup.py
+--- a/setup.py	(revision 7efefc8ae0e8485ab0a4a08637b021546341dc2a)
++++ b/setup.py	(date 1668025163102)
+@@ -6,6 +6,7 @@
+     author='Amit Khetan',
+     author_email='amit.khetan.70@50gramx.io',
+     description='ethos applications entities and service contracts for python domain',
+-    packages=['eapp-python-domain'],
++    packages=setuptools.find_packages('eapp-python-domain.eapp-python-domain'),
+     install_requires=['protobuf', 'grpcio', 'grpcio-tools'],
+-)
+\ No newline at end of file
++    include_package_data=True
++)
+Index: .idea/lapp-python-domain.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<module type=\"PYTHON_MODULE\" version=\"4\">\n  <component name=\"NewModuleRootManager\">\n    <content url=\"file://$MODULE_DIR$\">\n      <sourceFolder url=\"file://$MODULE_DIR$/src\" isTestSource=\"false\" />\n    </content>\n    <orderEntry type=\"sourceFolder\" forTests=\"false\" />\n  </component>\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/lapp-python-domain.iml b/.idea/lapp-python-domain.iml
+--- a/.idea/lapp-python-domain.iml	(revision 7efefc8ae0e8485ab0a4a08637b021546341dc2a)
++++ b/.idea/lapp-python-domain.iml	(date 1668025163176)
+@@ -4,6 +4,7 @@
+     <content url="file://$MODULE_DIR$">
+       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+     </content>
++    <orderEntry type="jdk" jdkName="Python 3.9 (id)" jdkType="Python SDK" />
+     <orderEntry type="sourceFolder" forTests="false" />
+   </component>
+ </module>
+\ No newline at end of file
+Index: pyproject.toml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>[build-system]\nrequires = [\"setuptools>=61.0\"]\nbuild-backend = \"setuptools.build_meta\"
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pyproject.toml b/pyproject.toml
+--- a/pyproject.toml	(revision 7efefc8ae0e8485ab0a4a08637b021546341dc2a)
++++ b/pyproject.toml	(date 1668025163132)
+@@ -1,3 +1,3 @@
+-[build-system]
+-requires = ["setuptools>=61.0"]
+-build-backend = "setuptools.build_meta"
+\ No newline at end of file
++#[build-system]
++#requires = ["setuptools>=61.0"]
++#build-backend = "setuptools.build_meta"
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"JavaScriptSettings\">\n    <option name=\"languageLevel\" value=\"ES6\" />\n  </component>\n  <component name=\"ProjectRootManager\" version=\"2\" project-jdk-name=\"Python 3.7\" project-jdk-type=\"Python SDK\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	(revision 7efefc8ae0e8485ab0a4a08637b021546341dc2a)
++++ b/.idea/misc.xml	(date 1668025163143)
+@@ -3,5 +3,5 @@
+   <component name="JavaScriptSettings">
+     <option name="languageLevel" value="ES6" />
+   </component>
+-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.7" project-jdk-type="Python SDK" />
++  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (id)" project-jdk-type="Python SDK" />
+ </project>
+\ No newline at end of file
+Index: eapp-python-domain/__init__.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import pkgutil\n\n__path__ = pkgutil.extend_path(__path__, __name__)\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/eapp-python-domain/__init__.py b/eapp-python-domain/__init__.py
+--- a/eapp-python-domain/__init__.py	(revision 7efefc8ae0e8485ab0a4a08637b021546341dc2a)
++++ b/eapp-python-domain/__init__.py	(date 1668025163150)
+@@ -1,3 +1,0 @@
+-import pkgutil
+-
+-__path__ = pkgutil.extend_path(__path__, __name__)
+Index: MANIFEST.IN
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/MANIFEST.IN b/MANIFEST.IN
+new file mode 100644
+--- /dev/null	(date 1668025163164)
++++ b/MANIFEST.IN	(date 1668025163164)
+@@ -0,0 +1,1 @@
++recursive-include eapp-python-domain/gramx *.py
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectId\" id=\"1R2Xgk1VPH58HQs7W6EvHZROCbW\" />\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7efefc8ae0e8485ab0a4a08637b021546341dc2a)
++++ b/.idea/workspace.xml	(date 1668026664177)
+@@ -1,4 +1,79 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
++  <component name="ChangeListManager">
++    <list default="true" id="c85bad50-d735-4168-9d25-54b2d0af94e1" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/MANIFEST.IN" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/__init__.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/lapp-python-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lapp-python-domain.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/eapp-python-domain/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/eapp-python-domain/__init__.py" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
+   <component name="ProjectId" id="1R2Xgk1VPH58HQs7W6EvHZROCbW" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="hideEmptyMiddlePackages" value="true" />
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
++    &quot;last_opened_file_path&quot;: &quot;/opt/ethos/apps/service/eapp-python-domain/eapp-python-domain&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
++  }
++}</component>
++  <component name="RecentsManager">
++    <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/eapp-python-domain" />
++    </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$" />
++    </key>
++  </component>
++  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="c85bad50-d735-4168-9d25-54b2d0af94e1" name="Changes" comment="" />
++      <created>1667873790358</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1667873790358</updated>
++      <workItem from="1667873792577" duration="311000" />
++      <workItem from="1667874110839" duration="74000" />
++      <workItem from="1667875172898" duration="9210000" />
++      <workItem from="1668026489322" duration="158000" />
++    </task>
++    <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
++  </component>
+ </project>
+\ No newline at end of file
+diff --git a/__init__.py b/__init__.py
+new file mode 100644

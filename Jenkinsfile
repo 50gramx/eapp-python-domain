@@ -51,7 +51,3 @@ node {
         echo "done"
     }
 }
-//
-// step-1: deploy the pypi server
-// step-2: build the package
-// step-3: push the package

@@ -1,4 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c85bad50-d735-4168-9d25-54b2d0af94e1" name="Changes" comment="ELINT-72 fixed setup.py">
+      <change beforePath="$PROJECT_DIR$/.idea/lapp-python-domain.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lapp-python-domain.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MANIFEST.IN" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/google/api/http_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/google/api/http_pb2_grpc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/google/api/httpbody_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/google/api/httpbody_pb2_grpc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/capability/discover_epme_1005_pb2_grpc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/gramx/fifty/zero/ethos/identity/multiverse/core/entity/epme_1005/contract_pb2_grpc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1001/contract_pb2_grpc.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eapp_python_domain/gramx/seventy/zero/ethos/gramxpro/multiverse/core/entity/epe_1002/contract_pb2_grpc.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="1R2Xgk1VPH58HQs7W6EvHZROCbW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/opt/ethos/apps/service/eapp-python-domain/src/eapp_python_domain&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/eapp_python_domain" />
+      <recent name="$PROJECT_DIR$/eapp-python-domain" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/newsrc" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c85bad50-d735-4168-9d25-54b2d0af94e1" name="Changes" comment="" />
+      <created>1667873790358</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667873790358</updated>
+      <workItem from="1667873792577" duration="311000" />
+      <workItem from="1667874110839" duration="74000" />
+      <workItem from="1667875172898" duration="9210000" />
+      <workItem from="1668026489322" duration="2960000" />
+      <workItem from="1668032790173" duration="3447000" />
+      <workItem from="1668036550545" duration="4337000" />
+      <workItem from="1668041835475" duration="12749000" />
+    </task>
+    <task id="LOCAL-00001" summary="ELINT-72 Updated GIT Url">
+      <created>1668026785939</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668026785939</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ELINT-72 Updated init, updated find_packages">
+      <created>1668027080400</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668027080400</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ELINT-72 commented pyproject.toml">
+      <created>1668027095095</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668027095095</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ELINT-72 added Manifest for recursive include">
+      <created>1668027111079</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668027111079</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ELINT-72 updated build step">
+      <created>1668028774848</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668028774848</updated>
+    </task>
+    <task id="LOCAL-00006" summary="ELINT-72 refactored">
+      <created>1668037626045</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1668037626045</updated>
+    </task>
+    <task id="LOCAL-00007" summary="ELINT-72 updated setup.py">
+      <created>1668037645503</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1668037645504</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ELINT-72 updated pyproject.toml">
+      <created>1668037656737</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668037656737</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ELINT-72 updated MANIFEST.IN">
+      <created>1668037666705</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668037666705</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ELINT-72 added init">
+      <created>1668037974462</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668037974462</updated>
+    </task>
+    <task id="LOCAL-00011" summary="ELINT-72 fixed setup.py">
+      <created>1668038263887</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668038263887</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ELINT-72 fixed setup.py">
+      <created>1668038294075</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1668038294075</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ELINT-72 Updated GIT Url" />
+    <MESSAGE value="ELINT-72 Updated init, updated find_packages" />
+    <MESSAGE value="ELINT-72 commented pyproject.toml" />
+    <MESSAGE value="ELINT-72 added Manifest for recursive include" />
+    <MESSAGE value="ELINT-72 updated build step" />
+    <MESSAGE value="ELINT-72 refactored" />
+    <MESSAGE value="ELINT-72 updated setup.py" />
+    <MESSAGE value="ELINT-72 updated pyproject.toml" />
+    <MESSAGE value="ELINT-72 updated MANIFEST.IN" />
+    <MESSAGE value="ELINT-72 added init" />
+    <MESSAGE value="ELINT-72 fixed setup.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="ELINT-72 fixed setup.py" />
+  </component>
 </project>
