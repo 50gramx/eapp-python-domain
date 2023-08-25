@@ -1,8 +1,5 @@
 [distutils]
-index-servers =
-  local
+index-servers = space-mypypi
 
-[local]
-repository: http://python.delivery.50gramx.com
-username: Amit-Khetan-70
-password: getethos
+[space-mypypi]
+repository = https://pypi.pkg.jetbrains.space/50gramx/p/main/python-delivery/simple
