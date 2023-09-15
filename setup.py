@@ -13,6 +13,6 @@ setup(
     description='ethos applications entities and service contracts for python domain',
     package_dir = {"": "src"},
     packages=['eapp_python_domain'],
-    install_requires=['protobuf', 'grpcio', 'grpcio-tools'],
+    install_requires=['protobuf==3.14.0', 'grpcio==1.34.0', 'grpcio-tools==1.34.0'],
     include_package_data=True
 )
