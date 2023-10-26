@@ -11,8 +11,8 @@ setup(
     author='Amit Khetan',
     author_email='amit.khetan.70@50gramx.io',
     description='ethos applications entities and service contracts for python domain',
-    packages=find_packages(where='src/eapp_python_domain'),
-    package_dir={'': 'src/eapp_python_domain'},
+    packages=find_packages(where='src/eapp_python_domain/ethos'),
+    package_dir={'': 'src/eapp_python_domain/ethos'},
     install_requires=['protobuf==3.14.0', 'grpcio==1.34.0', 'grpcio-tools==1.34.0'],
 )
 
