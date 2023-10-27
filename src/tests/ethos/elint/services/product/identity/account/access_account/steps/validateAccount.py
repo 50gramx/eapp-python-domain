@@ -1,6 +1,7 @@
 from behave import given, when, then
-from your_project.otp import OTPService
-from your_project.services import AccessAccountService
+from ethos.elint.services.product.identity.account.access_account_pb2 import ValidateAccountRequest
+from gramx.fifty.zero.ethos.identity.multiverse.core.entity.account.capabilities.access.service import \
+    AccessAccountService
 
 # Shared state among steps
 context = {}
@@ -13,46 +14,47 @@ def step_impl(context):
 
 @given('I provide a valid mobile number that exists in the system')
 def step_impl(context):
-    context.mobile_number = '1234567890'  # Assuming this number exists in the system
+    context.account_mobile_number = '1234567890'  # Assuming this number exists in the system
     # You might also fetch a valid number from a test database or mock service.
 
 
 @given('I provide a mobile number that does not exist in the system')
 def step_impl(context):
-    context.mobile_number = '0987654321'  # Assuming this number doesn't exist
+    context.account_mobile_number = '0987654321'  # Assuming this number doesn't exist
 
 
 @given('I provide no mobile number')
 def step_impl(context):
-    context.mobile_number = None
+    context.account_mobile_number = None
 
 
 @given('I provide an invalid mobile number format')
 def step_impl(context):
-    context.mobile_number = 'invalid-format'
+    context.account_mobile_number = 'invalid-format'
 
 
 @when('I call the ValidateAccount RPC')
 def step_impl(context):
     # Make the call to the RPC method and store the result in the context
-    context.response = context.service.validate_account(context.mobile_number)
+    request = ValidateAccountRequest(
+        account_mobile_number=context.account_mobile_number
+    )
+    context.response = context.service.validate_account(request)
 
 
 @then('I should receive a response indicating the account exists')
 def step_impl(context):
-    assert context.response.status == 'exists'
+    assert context.response.account_exists is True
 
 
 @then('I should receive an OTP on the mobile number')
 def step_impl(context):
-    otp_service = OTPService()
-    otp_sent = otp_service.is_otp_sent_to(context.mobile_number)
-    assert otp_sent
+    assert context.response.code_sent_at is not None
 
 
 @then('I should get a message saying "OTP Sent to the Mobile Number"')
 def step_impl(context):
-    assert context.response.message == 'OTP Sent to the Mobile Number'
+    assert context.response.validate_account_message == 'OTP Sent to the Mobile Number'
 
 
 @then('I should receive a response indicating the account does not exist')
