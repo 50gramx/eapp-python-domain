@@ -48,4 +48,11 @@ job("Python Capability Behaviour Acceptance") {
         }   // end of execution
 
     }   // end of running Python Domain Capability Contract Behaviour Tests
+
+    // run this job only on
+    // a Windows worker
+    // that is tagged as 'pool-1'
+    requirements {
+        workerTags("windows-pool")
+    }
 }
