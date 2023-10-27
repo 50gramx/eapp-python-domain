@@ -20,7 +20,7 @@ job("Python Capability Behaviour Acceptance") {
       text("EAPP_PYTHON_DOMAIN_DIR", value = "/mnt/space/work/eapp-python-domain")
     }
 
-    container(displayName = "Run Python Domain Capability Contract Behaviour Tests", image = "python:3.9.16") {
+    host(displayName = "Run Python Domain Capability Contract Behaviour Tests") {
 
         // load up all required paths in environments
         env["EAPP_CORE_DOMAIN_DIR"] = "{{ EAPP_CORE_DOMAIN_DIR }}"
