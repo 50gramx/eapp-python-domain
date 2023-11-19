@@ -59,8 +59,7 @@ def step_impl(context):
 
 @then('I should receive a response indicating the account does not exist')
 def step_impl(context):
-    assert context.response.account_exists is True
-    assert context.response.message == 'Account doesn\'t exists. Please Create your Account.'
+    assert context.response.account_exists is False
 
 
 @then('I should get a message saying "Account doesn\'t exists. Please Create your Account."')
