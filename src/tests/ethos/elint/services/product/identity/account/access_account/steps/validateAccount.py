@@ -64,7 +64,7 @@ def step_impl(context):
 
 @then('I should get a message saying "Account doesn\'t exists. Please Create your Account."')
 def step_impl(context):
-    assert context.response.message == 'Account doesn\'t exists. Please Create your Account.'
+    assert context.response.validate_account_message == 'Account doesn\'t exists. Please Create your Account.'
 
 
 @then('I should receive an error response indicating invalid input')
