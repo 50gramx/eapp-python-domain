@@ -20,7 +20,7 @@ def step_impl(context):
 
 @given('I provide a mobile number that does not exist in the system')
 def step_impl(context):
-    context.account_mobile_number = '0987654321'  # Assuming this number doesn't exist
+    context.account_mobile_number = '9787654321'  # Assuming this number doesn't exist
 
 
 @given('I provide no mobile number')
