@@ -69,4 +69,4 @@ def step_impl(context):
 
 @then('I should receive an error response indicating invalid input')
 def step_impl(context):
-    assert context.response.error == 'invalid_input'
+    assert context.response.validate_account_message == 'Invalid mobile number. Please provide a valid mobile number.'
