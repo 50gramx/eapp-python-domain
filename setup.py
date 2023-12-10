@@ -13,7 +13,7 @@ setup(
     description='ethos applications entities and service contracts for python domain',
     packages=find_packages(where='src/eapp_python_domain'),
     package_dir={'': 'src/eapp_python_domain'},
-    install_requires=['protobuf==3.14.0', 'grpcio==1.34.0', 'grpcio-tools==1.34.0'],
+    install_requires=['protobuf>=3.14.0', 'grpcio>=1.34.0', 'grpcio-tools>=1.34.0'],
 )
 
 # find eapp_python_domain/ethos/elint -type d -exec touch {}/__init__.py \;
