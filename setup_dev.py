@@ -6,7 +6,7 @@ here = pathlib.Path(__file__).parent.resolve()
 
 # NOTE: DO NOT EDIT ANYTHING TILL LINE NO 10
 setup(
-    name='ethos_dev',
+    name='ethosdev',
     version='0.0.1',
     author='Paras Verma',
     author_email='peivee@50gramx.io',
