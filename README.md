@@ -1,10 +1,9 @@
 # EAPP Python Domain 🐍
 
-[![PyPI Version](https://img.shields.io/pypi/v/eapp-python-domain.svg)](https://pypi.org/project/eapp-python-domain/)
-[![Python Version](https://img.shields.io/pypi/pyversions/eapp-python-domain.svg)](https://pypi.org/project/eapp-python-domain/)
+[![System Contracts Build](https://img.shields.io/github/actions/workflow/status/50gramx/eapp-system-contracts/protobuf-distribution.yml?label=system-contracts%20CI)](https://github.com/50gramx/eapp-system-contracts/actions/workflows/protobuf-distribution.yml)
+[![Latest Release](https://img.shields.io/github/v/release/50gramx/eapp-python-domain?label=latest%20release)](https://github.com/50gramx/eapp-python-domain/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/50gramx/eapp-python-domain/protobuf-distribution.yml)](https://github.com/50gramx/eapp-python-domain/actions)
-[![Downloads](https://img.shields.io/pypi/dm/eapp-python-domain.svg)](https://pypi.org/project/eapp-python-domain/)
+[![Package Index](https://img.shields.io/badge/index-private%20package%20index-blue)](https://raw.githubusercontent.com/50gramx/eapp-python-domain/master/packages/index.html)
 
 > **Python client library for EAPP (Ethos Apps Platform)** - Auto-generated protobuf client code for seamless integration with EAPP services.
 
