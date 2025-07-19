@@ -7,6 +7,28 @@
 
 > **Python client library for EAPP (Ethos Apps Platform)** - Auto-generated protobuf client code for seamless integration with EAPP services.
 
+## 📦 Package Index & Downloads
+
+### 🚀 Quick Access
+- **[📋 Package Index](https://raw.githubusercontent.com/50gramx/eapp-python-domain/master/packages/index.html)** - View all available packages
+- **[📥 Latest Release](https://github.com/50gramx/eapp-python-domain/releases/latest)** - Download latest version
+- **[🏗️ Build Status](https://github.com/50gramx/eapp-system-contracts/actions/workflows/protobuf-distribution.yml)** - Check CI/CD status
+
+### 📊 Available Packages
+| Package | Version | Release Date | Download |
+|---------|---------|--------------|----------|
+| **eapp-python-domain** | `2024.07.1752935026` | Latest | [📦 Download](https://github.com/50gramx/eapp-python-domain/releases/latest) |
+| **ethos** | `2024.07.1752935026` | Latest | [📦 Download](https://github.com/50gramx/eapp-python-domain/releases/latest) |
+
+### 🔧 Installation
+```bash
+# Install from our package index
+pip install --index-url https://raw.githubusercontent.com/50gramx/eapp-python-domain/master/packages/index.html eapp-python-domain
+
+# Or install specific version
+pip install --index-url https://raw.githubusercontent.com/50gramx/eapp-python-domain/master/packages/index.html eapp-python-domain==2024.07.1752935026
+```
+
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
