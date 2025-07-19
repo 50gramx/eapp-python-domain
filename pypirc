@@ -2,6 +2,6 @@
 index-servers = github
 
 [github]
-repository = https://github.com/50gramx/packages/pypi
+repository = https://pypi.pkg.github.com/50gramx
 username = ${{ github.actor }}
 password = ${{ secrets.PROTOBUF_TOKEN || secrets.GITHUB_TOKEN }}
