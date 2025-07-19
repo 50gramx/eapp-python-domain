@@ -10,15 +10,16 @@
 ## 📦 Package Index & Downloads
 
 ### 🚀 Quick Access
-- **[📋 Package Index](https://raw.githubusercontent.com/50gramx/eapp-python-domain/master/packages/index.html)** - View all available packages
+- **[📋 Package Index (HTML Preview)](https://html-preview.github.io/?url=https://github.com/50gramx/eapp-python-domain/blob/master/packages/index.html)** - View all available packages
+- **[📋 Raw Package Index](https://raw.githubusercontent.com/50gramx/eapp-python-domain/master/packages/index.html)** - Direct package index
 - **[📥 Latest Release](https://github.com/50gramx/eapp-python-domain/releases/latest)** - Download latest version
 - **[🏗️ Build Status](https://github.com/50gramx/eapp-system-contracts/actions/workflows/protobuf-distribution.yml)** - Check CI/CD status
 
 ### 📊 Available Packages
-| Package | Version | Release Date | Download |
-|---------|---------|--------------|----------|
-| **eapp-python-domain** | `2024.07.1752935026` | Latest | [📦 Download](https://github.com/50gramx/eapp-python-domain/releases/latest) |
-| **ethos** | `2024.07.1752935026` | Latest | [📦 Download](https://github.com/50gramx/eapp-python-domain/releases/latest) |
+| Package | Version | Type | Download |
+|---------|---------|------|----------|
+| **ethos** | `0.1.0.1752936352` | Source | [📦 .tar.gz](https://github.com/50gramx/eapp-python-domain/releases/download/v0.1.0.1752937972/ethos-0.1.0.1752936352.tar.gz) |
+| **ethos** | `0.1.0.1752936352` | Wheel | [📦 .whl](https://github.com/50gramx/eapp-python-domain/releases/download/v0.1.0.1752937972/ethos-0.1.0.1752936352-py3-none-any.whl) |
 
 ### 🔧 Installation
 ```bash
@@ -26,7 +27,7 @@
 pip install --index-url https://raw.githubusercontent.com/50gramx/eapp-python-domain/master/packages/index.html eapp-python-domain
 
 # Or install specific version
-pip install --index-url https://raw.githubusercontent.com/50gramx/eapp-python-domain/master/packages/index.html eapp-python-domain==2024.07.1752935026
+pip install --index-url https://raw.githubusercontent.com/50gramx/eapp-python-domain/master/packages/index.html eapp-python-domain==0.1.0.1752936352
 ```
 
 ## 📋 Table of Contents
