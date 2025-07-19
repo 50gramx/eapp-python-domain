@@ -15,11 +15,8 @@
 - **[📥 Latest Release](https://github.com/50gramx/eapp-python-domain/releases/latest)** - Download latest version
 - **[🏗️ Build Status](https://github.com/50gramx/eapp-system-contracts/actions/workflows/protobuf-distribution.yml)** - Check CI/CD status
 
-### 📊 Available Packages
-| Package | Version | Type | Download |
-|---------|---------|------|----------|
-| **ethos** | `0.1.0.1752936352` | Source | [📦 .tar.gz](https://github.com/50gramx/eapp-python-domain/releases/download/v0.1.0.1752937972/ethos-0.1.0.1752936352.tar.gz) |
-| **ethos** | `0.1.0.1752936352` | Wheel | [📦 .whl](https://github.com/50gramx/eapp-python-domain/releases/download/v0.1.0.1752937972/ethos-0.1.0.1752936352-py3-none-any.whl) |
+### 📦 Available Packages
+> **📋 View all available packages and versions in our [Package Index (HTML Preview)](https://html-preview.github.io/?url=https://github.com/50gramx/eapp-python-domain/blob/master/packages/index.html)**
 
 ### 🔧 Installation
 ```bash
