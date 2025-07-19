@@ -7,7 +7,7 @@ here = pathlib.Path(__file__).parent.resolve()
 # NOTE: DO NOT EDIT ANYTHING TILL LINE NO 10
 setup(
     name='ethos',
-    version='0.1.0.1752937674',
+    version='0.1.0.1752937972',
     author='Amit Khetan',
     author_email='amit.khetan.70@50gramx.io',
     description='ethos applications entities and service contracts for python domain',
