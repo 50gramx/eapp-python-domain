@@ -15,14 +15,14 @@ _sym_db = _symbol_database.Default()
 from community.apps.gramx.fifty.zero.epn.epn_peers import entities_pb2 as community_dot_apps_dot_gramx_dot_fifty_dot_zero_dot_epn_dot_epn__peers_dot_entities__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nDcommunity/apps/gramx/fifty/zero/epn/epn_peers/EAMV7103_service.proto\x12-community.apps.gramx.fifty.zero.epn.epn_peers\x1a<community/apps/gramx/fifty/zero/epn/epn_peers/entities.proto2\x99\x01\n\x17\x45\x41MV7103DiscoverService\x12~\n\x08\x45\x41MC7102\x12\x37.community.apps.gramx.fifty.zero.epn.epn_peers.EAMV7100\x1a\x37.community.apps.gramx.fifty.zero.epn.epn_peers.EAMV7103(\x01\x42\x41Z?community/apps/gramx/fifty/zero/epn/epn_peers/services;servicesb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nDcommunity/apps/gramx/fifty/zero/epn/epn_peers/EAMV7103_service.proto\x12-community.apps.gramx.fifty.zero.epn.epn_peers\x1a<community/apps/gramx/fifty/zero/epn/epn_peers/entities.proto2\x99\x01\n\x17\x45\x41MV7103DiscoverService\x12~\n\x08\x45\x41MC7102\x12\x37.community.apps.gramx.fifty.zero.epn.epn_peers.EAMV7100\x1a\x37.community.apps.gramx.fifty.zero.epn.epn_peers.EAMV7103(\x01\x42gZegithub.com/50gramx/eapp-golang-domain/community/apps/gramx/fifty/zero/epn/epn_peers/services;servicesb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'community.apps.gramx.fifty.zero.epn.epn_peers.EAMV7103_service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['DESCRIPTOR']._options = None
-  _globals['DESCRIPTOR']._serialized_options = b'Z?community/apps/gramx/fifty/zero/epn/epn_peers/services;services'
+  _globals['DESCRIPTOR']._serialized_options = b'Zegithub.com/50gramx/eapp-golang-domain/community/apps/gramx/fifty/zero/epn/epn_peers/services;services'
   _globals['_EAMV7103DISCOVERSERVICE']._serialized_start=182
   _globals['_EAMV7103DISCOVERSERVICE']._serialized_end=335
 # @@protoc_insertion_point(module_scope)
