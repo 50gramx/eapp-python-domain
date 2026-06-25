@@ -15,14 +15,14 @@ _sym_db = _symbol_database.Default()
 from community.apps.gramx.fifty.zero.ethos.mesh_demo import entities_pb2 as community_dot_apps_dot_gramx_dot_fifty_dot_zero_dot_ethos_dot_mesh__demo_dot_entities__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nFcommunity/apps/gramx/fifty/zero/ethos/mesh_demo/EAMV8001_service.proto\x12/community.apps.gramx.fifty.zero.ethos.mesh_demo\x1a>community/apps/gramx/fifty/zero/ethos/mesh_demo/entities.proto2\xad\x04\n\x17\x45\x41MV8001DiscoverService\x12\x80\x01\n\x08\x45\x41MC8001\x12\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8002\x1a\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8001\x12\x82\x01\n\x08\x45\x41MC8002\x12\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8002\x1a\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8001(\x01\x12\x82\x01\n\x08\x45\x41MC8003\x12\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8002\x1a\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV80010\x01\x12\x84\x01\n\x08\x45\x41MC8004\x12\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8002\x1a\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8001(\x01\x30\x01\x42:Z8community/apps/gramx/fifty/zero/ethos/mesh_demo;servicesb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\nFcommunity/apps/gramx/fifty/zero/ethos/mesh_demo/EAMV8001_service.proto\x12/community.apps.gramx.fifty.zero.ethos.mesh_demo\x1a>community/apps/gramx/fifty/zero/ethos/mesh_demo/entities.proto2\xad\x04\n\x17\x45\x41MV8001DiscoverService\x12\x80\x01\n\x08\x45\x41MC8001\x12\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8002\x1a\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8001\x12\x82\x01\n\x08\x45\x41MC8002\x12\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8002\x1a\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8001(\x01\x12\x82\x01\n\x08\x45\x41MC8003\x12\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8002\x1a\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV80010\x01\x12\x84\x01\n\x08\x45\x41MC8004\x12\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8002\x1a\x39.community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8001(\x01\x30\x01\x42\x43ZAcommunity/apps/gramx/fifty/zero/ethos/mesh_demo/services;servicesb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'community.apps.gramx.fifty.zero.ethos.mesh_demo.EAMV8001_service_pb2', _globals)
 if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['DESCRIPTOR']._options = None
-  _globals['DESCRIPTOR']._serialized_options = b'Z8community/apps/gramx/fifty/zero/ethos/mesh_demo;services'
+  _globals['DESCRIPTOR']._serialized_options = b'ZAcommunity/apps/gramx/fifty/zero/ethos/mesh_demo/services;services'
   _globals['_EAMV8001DISCOVERSERVICE']._serialized_start=188
   _globals['_EAMV8001DISCOVERSERVICE']._serialized_end=745
 # @@protoc_insertion_point(module_scope)
