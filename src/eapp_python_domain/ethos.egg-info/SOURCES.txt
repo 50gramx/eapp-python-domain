@@ -33,6 +33,9 @@ src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/ethos/__init__.py
 src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/ethos/mesh_demo/EAMV8001_service_pb2.py
 src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/ethos/mesh_demo/EAMV8001_service_pb2.pyi
 src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/ethos/mesh_demo/EAMV8001_service_pb2_grpc.py
+src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/ethos/mesh_demo/EAMV8004_service_pb2.py
+src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/ethos/mesh_demo/EAMV8004_service_pb2.pyi
+src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/ethos/mesh_demo/EAMV8004_service_pb2_grpc.py
 src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/ethos/mesh_demo/__init__.py
 src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/ethos/mesh_demo/entities_pb2.py
 src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/ethos/mesh_demo/entities_pb2.pyi

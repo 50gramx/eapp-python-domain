@@ -79,3 +79,13 @@ class EAMV8003(_message.Message):
     eamvt8005: str
     eamvt8032: float
     def __init__(self, eamvt8005: _Optional[str] = ..., eamvt8032: _Optional[float] = ...) -> None: ...
+
+class EAMV8004(_message.Message):
+    __slots__ = ("eamvt8033", "eamvt8034", "eamvt8035")
+    EAMVT8033_FIELD_NUMBER: _ClassVar[int]
+    EAMVT8034_FIELD_NUMBER: _ClassVar[int]
+    EAMVT8035_FIELD_NUMBER: _ClassVar[int]
+    eamvt8033: str
+    eamvt8034: bool
+    eamvt8035: int
+    def __init__(self, eamvt8033: _Optional[str] = ..., eamvt8034: bool = ..., eamvt8035: _Optional[int] = ...) -> None: ...
