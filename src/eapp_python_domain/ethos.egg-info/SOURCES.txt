@@ -13,6 +13,13 @@ src/eapp_python_domain/ethos/community/apps/gramx/__init__.py
 src/eapp_python_domain/ethos/community/apps/gramx/fifty/__init__.py
 src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/__init__.py
 src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/epn/__init__.py
+src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/epn/epn_agent_chat/EAMV6002_service_pb2.py
+src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/epn/epn_agent_chat/EAMV6002_service_pb2.pyi
+src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/epn/epn_agent_chat/EAMV6002_service_pb2_grpc.py
+src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/epn/epn_agent_chat/__init__.py
+src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/epn/epn_agent_chat/entities_pb2.py
+src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/epn/epn_agent_chat/entities_pb2.pyi
+src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/epn/epn_agent_chat/entities_pb2_grpc.py
 src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/epn/epn_peers/EAMV7101_service_pb2.py
 src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/epn/epn_peers/EAMV7101_service_pb2.pyi
 src/eapp_python_domain/ethos/community/apps/gramx/fifty/zero/epn/epn_peers/EAMV7101_service_pb2_grpc.py
